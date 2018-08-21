@@ -34,8 +34,11 @@ public class VendorRegistration extends BaseServlet {
 		
 		if(!userPassword.equals(userConfirmPassword)) {
 			
-			response.sendRedirect("vendorRegistration.jsp");
 			
+			
+			request.setAttribute("error"," password and confirm password does not match ");
+			request.getRequestDispatcher("vendorRegistration.jsp").forward(request, response);
+	
 		}
 		
 		

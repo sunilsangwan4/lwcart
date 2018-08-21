@@ -42,10 +42,15 @@ public class VendorLogin extends BaseServlet {
 		}
 
 		if (isUserValid) {
-			response.sendRedirect("vendorHome.jsp");
+			response.sendRedirect("welcome.jsp");
 		}
 		else {
-			response.sendRedirect("vendorLogin.jsp");
+			
+			request.setAttribute("error"," invalid email and password ");
+			request.getRequestDispatcher("vendorLogin.jsp").forward(request, response);
+	
+			
+			
 		}
 
 		connection.close();

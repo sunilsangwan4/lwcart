@@ -33,8 +33,8 @@
 
 						<td>${plist.categoryName }</td>
 						<td>${plist.pDiscription }</td>
-						<td><img src=".${plist.pPath }" alt="Smiley face" width="42"
-							height="42"></td>
+						<td><img src="file://${plist.pPath } " />
+							</td>
 
 
 
